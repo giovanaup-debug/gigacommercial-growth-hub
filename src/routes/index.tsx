@@ -1,26 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Problem } from "@/components/site/Problem";
+import { Solutions } from "@/components/site/Solutions";
+import { WhyUs } from "@/components/site/WhyUs";
+import { About } from "@/components/site/About";
+import { Results } from "@/components/site/Results";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Gi.ga | Inteligência Comercial — Vendas B2B previsíveis" },
+      {
+        name: "description",
+        content:
+          "Estruturação de funil, prospecção Outbound e inteligência de dados para vendas B2B de alta complexidade. +30 anos de experiência comercial.",
+      },
+      { property: "og:title", content: "Gi.ga | Inteligência Comercial" },
+      {
+        property: "og:description",
+        content: "Previsibilidade e controle total do seu funil de vendas B2B.",
+      },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  useReveal();
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Problem />
+        <Solutions />
+        <WhyUs />
+        <About />
+        <Results />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }
