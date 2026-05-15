@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Mail, Instagram } from "lucide-react";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome").max(100),
@@ -27,12 +27,11 @@ export function Contact() {
     }
     setErrors({});
     setLoading(true);
-    // Build mailto fallback (no backend)
     const body = encodeURIComponent(
       `Nome: ${result.data.name}\nEmpresa: ${result.data.company}\nE-mail: ${result.data.email}\n\n${result.data.message}`
     );
     window.location.href = `mailto:contato@gigacomercial.com.br?subject=${encodeURIComponent(
-      "Novo contato — site Gi.ga"
+      "Reunião de Diagnóstico — site Gi.Ga"
     )}&body=${body}`;
     setTimeout(() => {
       setLoading(false);
@@ -41,24 +40,32 @@ export function Contact() {
   }
 
   return (
-    <section id="contato" className="py-24 sm:py-32 border-t border-border/50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid opacity-40" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent/10 blur-3xl" />
+    <section id="contato" className="py-24 sm:py-32 bg-ink text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10 bg-grid-soft" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/20 blur-3xl" />
 
-      <div className="relative mx-auto max-w-5xl px-6">
-        <div className="text-center max-w-2xl mx-auto reveal">
-          <span className="text-xs uppercase tracking-[0.2em] text-accent">Vamos conversar</span>
-          <h2 className="mt-3 text-3xl sm:text-5xl font-bold text-gradient">
-            Pronto para tornar suas vendas previsíveis?
+      <div className="relative mx-auto max-w-6xl px-6 grid lg:grid-cols-5 gap-12">
+        <div className="lg:col-span-2 reveal">
+          <span className="text-xs uppercase tracking-[0.2em] text-teal-soft font-semibold">Vamos conversar</span>
+          <h2 className="mt-3 text-3xl sm:text-5xl font-bold leading-tight">
+            Vamos construir juntos o futuro do seu <span className="text-accent-grad">negócio</span>?
           </h2>
-          <p className="mt-5 text-muted-foreground">
-            Conte sobre seu desafio comercial. Respondemos em até 1 dia útil.
+          <p className="mt-5 text-white/70 leading-relaxed">
+            Agende sua Reunião de Diagnóstico e descubra os gargalos da sua expansão.
           </p>
+          <div className="mt-8 space-y-3 text-sm">
+            <a href="mailto:contato@gigacomercial.com.br" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
+              <Mail className="size-4" /> contato@gigacomercial.com.br
+            </a>
+            <a href="https://instagram.com/gigainteligencia" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
+              <Instagram className="size-4" /> @gigainteligencia
+            </a>
+          </div>
         </div>
 
         <form
           onSubmit={onSubmit}
-          className="reveal mt-12 rounded-3xl border border-border bg-surface/70 backdrop-blur p-6 sm:p-10 grid sm:grid-cols-2 gap-5"
+          className="reveal lg:col-span-3 rounded-3xl border border-white/10 bg-white/5 backdrop-blur p-6 sm:p-10 grid sm:grid-cols-2 gap-5"
         >
           <Field name="name" label="Nome" placeholder="Seu nome" error={errors.name} />
           <Field name="company" label="Empresa" placeholder="Nome da empresa" error={errors.company} />
@@ -71,39 +78,27 @@ export function Contact() {
             error={errors.email}
           />
           <div className="sm:col-span-2">
-            <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+            <label className="text-xs font-semibold text-white/60 uppercase tracking-wider">
               Como podemos ajudar?
             </label>
             <textarea
               name="message"
               rows={4}
               placeholder="Conte sobre seu cenário comercial atual..."
-              className="mt-2 w-full rounded-xl bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent transition resize-none"
+              className="mt-2 w-full rounded-xl bg-white/10 border border-white/15 text-white placeholder:text-white/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-soft/40 focus:border-teal-soft transition resize-none"
             />
             {errors.message && <p className="mt-1.5 text-xs text-destructive">{errors.message}</p>}
           </div>
-
-          <div className="sm:col-span-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
-            <p className="text-xs text-muted-foreground">
-              Ou escreva para{" "}
-              <a className="text-accent hover:underline" href="mailto:contato@gigacomercial.com.br">
-                contato@gigacomercial.com.br
-              </a>
-            </p>
+          <div className="sm:col-span-2 flex justify-end pt-2">
             <button
               type="submit"
               disabled={loading || sent}
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent text-accent-foreground px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition disabled:opacity-60"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-teal-soft text-foreground px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition disabled:opacity-60"
             >
               {sent ? (
-                <>
-                  <CheckCircle2 className="size-4" /> Enviado
-                </>
+                <><CheckCircle2 className="size-4" /> Enviado</>
               ) : (
-                <>
-                  {loading ? "Enviando..." : "Enviar mensagem"}
-                  <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
-                </>
+                <>{loading ? "Enviando..." : "Enviar mensagem"}<ArrowRight className="size-4 group-hover:translate-x-0.5 transition" /></>
               )}
             </button>
           </div>
@@ -114,30 +109,16 @@ export function Contact() {
 }
 
 function Field({
-  name,
-  label,
-  placeholder,
-  type = "text",
-  className = "",
-  error,
-}: {
-  name: string;
-  label: string;
-  placeholder: string;
-  type?: string;
-  className?: string;
-  error?: string;
-}) {
+  name, label, placeholder, type = "text", className = "", error,
+}: { name: string; label: string; placeholder: string; type?: string; className?: string; error?: string }) {
   return (
     <div className={className}>
-      <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-        {label}
-      </label>
+      <label className="text-xs font-semibold text-white/60 uppercase tracking-wider">{label}</label>
       <input
         name={name}
         type={type}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-xl bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent transition"
+        className="mt-2 w-full rounded-xl bg-white/10 border border-white/15 text-white placeholder:text-white/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-soft/40 focus:border-teal-soft transition"
       />
       {error && <p className="mt-1.5 text-xs text-destructive">{error}</p>}
     </div>
