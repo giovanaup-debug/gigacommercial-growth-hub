@@ -11,7 +11,7 @@ export function Hero() {
         <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted-foreground reveal">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Inteligência Comercial · B2B de Alta Complexidade
+            Vamos construir juntos o futuro do seu negócio?
           </div>
 
           <h1 className="reveal mt-6 text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-foreground">
