@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import logo from "@/assets/giga-logo.jpg";
+import logo from "@/assets/giga-logo-new.png";
 
 export function Hero() {
   return (
