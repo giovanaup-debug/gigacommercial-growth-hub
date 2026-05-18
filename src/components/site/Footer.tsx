@@ -1,5 +1,5 @@
 import { Instagram, Mail } from "lucide-react";
-import logo from "@/assets/giga-logo.jpg";
+import logo from "@/assets/giga-logo-new.png";
 
 export function Footer() {
   return (
