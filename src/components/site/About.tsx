@@ -8,8 +8,9 @@ const partners = [
     photo: giovana,
     bullets: [
       "+15 anos consolidando operações de alta performance em tecnologia e serviços.",
-      "Mestra em Psicologia com foco em comportamento organizacional, otimizando negociações corporativas.",
+      "Especialista em estruturação de processos e execução disciplinada voltada ao fechamento.",
       "Expertise em vendas consultivas e gestão de contas B2B focadas em aumento de receita.",
+      "Mestra em Psicologia com foco em comportamento organizacional, otimizando negociações corporativas.",
     ],
   },
   {
