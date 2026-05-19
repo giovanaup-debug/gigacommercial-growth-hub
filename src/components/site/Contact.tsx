@@ -50,9 +50,6 @@ export function Contact() {
           <h2 className="mt-3 text-3xl sm:text-5xl font-bold leading-tight">
             Vamos construir juntos o futuro do seu <span className="text-accent-grad">negócio</span>?
           </h2>
-          <p className="mt-5 text-white/70 leading-relaxed">
-            Agende sua Reunião e descubra os gargalos da sua expansão.
-          </p>
           <p className="mt-3 text-white leading-relaxed">
             Entre em contato e vamos impulsionar as vendas da sua operação.
           </p>
