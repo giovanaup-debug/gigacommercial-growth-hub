@@ -31,7 +31,7 @@ export function Contact() {
       `Nome: ${result.data.name}\nEmpresa: ${result.data.company}\nE-mail: ${result.data.email}\n\n${result.data.message}`
     );
     window.location.href = `mailto:contato@gigacomercial.com.br?subject=${encodeURIComponent(
-      "Reunião de Diagnóstico — site Gi.Ga"
+      "Agendar Reunião — site Gi.Ga"
     )}&body=${body}`;
     setTimeout(() => {
       setLoading(false);
@@ -51,7 +51,7 @@ export function Contact() {
             Vamos construir juntos o futuro do seu <span className="text-accent-grad">negócio</span>?
           </h2>
           <p className="mt-5 text-white/70 leading-relaxed">
-            Agende sua Reunião de Diagnóstico e descubra os gargalos da sua expansão.
+            Agende sua Reunião e descubra os gargalos da sua expansão.
           </p>
           <div className="mt-8 space-y-3 text-sm">
             <a href="mailto:contato@gigacomercial.com.br" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
