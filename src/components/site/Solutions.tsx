@@ -20,7 +20,7 @@ const solutions = [
     title: "Inteligência de Dados e Otimização",
     desc: "Monitoramento contínuo de KPIs e saúde do funil, gestão de CRM e otimização de resultados baseada em indicadores reais de faturamento.",
     badge: "ROI E ESCALA COMERCIAL",
-    bullets: ["KPIs e dashboards", "Implantação de CRM", "Otimização contínua"],
+    bullets: ["KPIs e dashboards", "Gestão de CRM", "Otimização contínua"],
   },
 ];
 
