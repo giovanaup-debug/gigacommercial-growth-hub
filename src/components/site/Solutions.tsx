@@ -13,7 +13,7 @@ const solutions = [
     title: "Desenvolvimento de Negócios",
     desc: "Prospecção ativa de alto nível (Outbound), qualificação e condução de negociações complexas para abertura de contas estratégicas. Criação e padronização de scripts de cada etapa.",
     badge: "METODOLOGIA REPLICÁVEL · GANHO DE TRAÇÃO",
-    bullets: ["Outbound Enterprise", "Qualificação consultiva", "Negociação executiva"],
+    bullets: ["Outbound com método", "Qualificação consultiva", "Negociação executiva"],
   },
   {
     tag: "03",
