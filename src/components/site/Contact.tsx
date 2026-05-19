@@ -53,6 +53,9 @@ export function Contact() {
           <p className="mt-5 text-white/70 leading-relaxed">
             Agende sua Reunião e descubra os gargalos da sua expansão.
           </p>
+          <p className="mt-3 text-white leading-relaxed">
+            Entre em contato e vamos impulsionar as vendas da sua operação.
+          </p>
           <div className="mt-8 space-y-3 text-sm">
             <a href="mailto:contato@gigacomercial.com.br" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
               <Mail className="size-4" /> contato@gigacomercial.com.br
