@@ -29,7 +29,7 @@ export function Hero() {
               href="#contato"
               className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3.5 text-sm font-semibold hover:opacity-90 transition"
             >
-              Agendar Reunião de Diagnóstico
+              Agendar Reunião
               <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
             </a>
             <a
