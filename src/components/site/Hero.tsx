@@ -44,7 +44,7 @@ export function Hero() {
             {[
               { k: "+30", v: "Anos de experiência somados" },
               { k: "B2B", v: "Vendas de alta complexidade" },
-              { k: "Enterprise", v: "Foco em grandes contas" },
+              { k: "Vendas consultivas complexas", v: "Foco em grandes contas" },
             ].map((s) => (
               <div key={s.v} className="border-l-2 border-primary/30 pl-4">
                 <div className="text-2xl font-bold text-primary">{s.k}</div>
