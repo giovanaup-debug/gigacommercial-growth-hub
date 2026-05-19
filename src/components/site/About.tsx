@@ -47,7 +47,7 @@ export function About() {
               <span className="text-accent-grad">+30 anos</span> de experiência somados em vendas de alta complexidade.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Unimos estratégia e execução para construir relacionamentos de grandes contas e
+              Unimos estratégia e execução para construir relacionamentos consultivos e
               crescimento sustentável. Atuamos lado a lado com fundadores e líderes que precisam
               transformar venda artesanal em um processo industrial — previsível, mensurável e replicável.
             </p>
