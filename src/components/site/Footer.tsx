@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <img src={logo} alt="Gi.Ga Inteligência Comercial" className="h-12 w-auto" />
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            Conectando estratégia, operação e crescimento para empresas B2B de alta complexidade.
+            Conectando estratégia, operação e crescimento para empresas B2B.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-10 text-sm">

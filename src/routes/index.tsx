@@ -18,12 +18,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Transformamos sua força de vendas B2B com estratégia, previsibilidade e relacionamento de alto valor. +30 anos de experiência somados em vendas de alta complexidade.",
+          "Transformamos sua força de vendas B2B com estratégia, previsibilidade e relacionamento de alto valor. +30 anos de experiência somados em vendas complexas.",
       },
       { property: "og:title", content: "Gi.Ga Inteligência Comercial" },
       {
         property: "og:description",
-        content: "Conectando estratégia, operação e crescimento em vendas B2B de alta complexidade.",
+        content: "Conectando estratégia, operação e crescimento em vendas B2B.",
       },
       { property: "og:type", content: "website" },
     ],
