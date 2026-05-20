@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { ArrowRight, CheckCircle2, Mail, Instagram, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2, Mail, Phone } from "lucide-react";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome").max(100),

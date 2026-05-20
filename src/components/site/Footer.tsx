@@ -1,4 +1,4 @@
-import { Instagram, Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import logo from "@/assets/giga-logo-new.png";
 
 export function Footer() {
@@ -31,8 +31,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/gigainteligencia" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-primary transition">
-                  <Instagram className="size-3.5" /> @gigainteligencia
+                <a href="https://wa.me/5551982432615" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-primary transition">
+                  <Phone className="size-3.5" /> &nbsp;&nbsp;&nbsp;+55 51 98243-2615
                 </a>
               </li>
             </ul>
