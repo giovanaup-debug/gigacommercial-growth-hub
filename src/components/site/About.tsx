@@ -44,7 +44,7 @@ export function About() {
           <div className="reveal">
             <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">Quem somos</span>
             <h2 className="mt-3 text-3xl sm:text-5xl font-bold">
-              <span className="text-accent-grad">+30 anos</span> de experiência somados em vendas de alta complexidade.
+              <span className="text-accent-grad">+30 anos</span> de experiência somados em vendas consultivas.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Unimos estratégia e execução para construir relacionamentos consultivos e
