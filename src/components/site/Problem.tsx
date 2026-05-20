@@ -19,7 +19,7 @@ export function Problem() {
             Desafios do <span className="text-accent-grad">mercado</span>
           </h2>
           <p className="mt-5 text-muted-foreground">
-            Vendas no mercado B2B exigem método. Os principais gargalos que identificamos nas operações comerciais B2B:
+            Vendas B2B exigem método. Os principais gargalos que identificamos nas operações comerciais são:
           </p>
         </div>
 
