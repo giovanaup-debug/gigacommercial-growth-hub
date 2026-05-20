@@ -30,7 +30,7 @@ export function Contact() {
     const body = encodeURIComponent(
       `Nome: ${result.data.name}\nEmpresa: ${result.data.company}\nE-mail: ${result.data.email}\n\n${result.data.message}`
     );
-    window.location.href = `mailto:contato@gigacomercial.com.br?subject=${encodeURIComponent(
+    window.location.href = `mailto:contato@gigainteligencia.com?subject=${encodeURIComponent(
       "Agendar Reunião — site Gi.Ga"
     )}&body=${body}`;
     setTimeout(() => {
@@ -54,8 +54,8 @@ export function Contact() {
             Entre em contato e vamos impulsionar as vendas da sua operação.
           </p>
           <div className="mt-8 space-y-3 text-sm">
-            <a href="mailto:contato@gigacomercial.com.br" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
-              <Mail className="size-4" /> contato@gigacomercial.com.br
+            <a href="mailto:contato@gigainteligencia.com" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
+              <Mail className="size-4" /> contato@gigainteligencia.com
             </a>
             <a href="https://wa.me/5551982432615" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white">
               <Phone className="size-4" /> &nbsp;&nbsp;&nbsp;+55 51 98243-2615
