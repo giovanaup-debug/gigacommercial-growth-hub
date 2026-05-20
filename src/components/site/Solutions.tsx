@@ -4,7 +4,7 @@ const solutions = [
   {
     tag: "01",
     title: "Estratégia Comercial",
-    desc: "Estruturação de processos, planejamento de metas. Inteligência de mercado com identificação de novos nichos e perfis de clientes com maior potencial de retorno (ICP).",
+    desc: "Estruturação de processos, planejamento de metas. Inteligência de mercado com identificação de novos nichos e/ou regiões e perfis de clientes com maior potencial de retorno (ICP).",
     badge: "PLANEJAMENTO E PREVISIBILIDADE ESTRATÉGICA",
     bullets: ["Definição de ICP", "Playbook comercial", "Planejamento de metas"],
   },
