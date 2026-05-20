@@ -36,7 +36,7 @@ export function Solutions() {
             </h2>
           </div>
           <p className="max-w-sm text-sm text-muted-foreground">
-            Atuação integrada da estratégia à execução, com squads sêniores dedicados ao seu crescimento.
+            Atuação integrada da estratégia à execução dedicados ao seu crescimento.
           </p>
         </div>
 
