@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { ArrowRight, CheckCircle2, Mail, Instagram } from "lucide-react";
+import { ArrowRight, CheckCircle2, Mail, Phone } from "lucide-react";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome").max(100),
@@ -57,8 +57,8 @@ export function Contact() {
             <a href="mailto:contato@gigacomercial.com.br" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
               <Mail className="size-4" /> contato@gigacomercial.com.br
             </a>
-            <a href="https://instagram.com/gigainteligencia" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
-              <Instagram className="size-4" /> @gigainteligencia
+            <a href="https://wa.me/5551982432615" target="_blank" rel="noreferrer" className="a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none text-white">
+              <Phone className="size-4" /> &nbsp;&nbsp;&nbsp;+55 51 98243-2615
             </a>
           </div>
         </div>
