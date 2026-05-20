@@ -55,13 +55,8 @@ export function Hero() {
         </div>
 
         <div className="reveal lg:col-span-5 relative">
-          <div className="relative aspect-square max-w-md mx-auto">
-            <div className="absolute inset-8 rounded-full border border-primary/20" />
-            <div className="absolute inset-16 rounded-full border border-primary/30" />
-            <div className="absolute inset-24 rounded-full border border-primary/40" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img src={logo} alt="Gi.Ga Inteligência Comercial" className="w-2/3 h-auto" />
-            </div>
+          <div className="relative aspect-square max-w-md mx-auto flex items-center justify-center">
+            <img src={logo} alt="Gi.Ga Inteligência Comercial" className="w-2/3 h-auto" />
           </div>
         </div>
       </div>
