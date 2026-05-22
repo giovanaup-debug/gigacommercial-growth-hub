@@ -77,6 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Gi.ga Inteligência Comercial" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Gi.ga | Inteligência Comercial" },
+      { name: "twitter:title", content: "Gi.ga | Inteligência Comercial" },
+      { property: "og:description", content: "Vendas B2B previsíveis com método, processo e inteligência de dados." },
+      { name: "twitter:description", content: "Vendas B2B previsíveis com método, processo e inteligência de dados." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3c01c0b0-6e98-49c9-9833-7cba6500efd4/id-preview-e6eabf3a--9358c6eb-90e2-4203-b18a-d72f4dd9ca6f.lovable.app-1779385200876.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3c01c0b0-6e98-49c9-9833-7cba6500efd4/id-preview-e6eabf3a--9358c6eb-90e2-4203-b18a-d72f4dd9ca6f.lovable.app-1779385200876.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
