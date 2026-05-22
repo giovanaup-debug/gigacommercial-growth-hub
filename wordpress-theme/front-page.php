@@ -301,7 +301,7 @@ get_header();
                 <h2 style="margin-top:12px;color:#fff;">Vamos construir juntos o futuro do seu <span class="text-accent-grad">negócio</span>?</h2>
                 <p style="margin-top:16px;color:#fff;">Entre em contato e vamos impulsionar as vendas da sua operação.</p>
                 <div style="margin-top:32px;font-size:14px;">
-                    <a href="mailto:contato@gigainteligencia.com">✉ contato@gigainteligencia.com</a>
+                    <a href="mailto:contato@gigacomercial.com">✉ contato@gigacomercial.com</a>
                     <a href="https://wa.me/5551982432615" target="_blank" rel="noreferrer">☎ +55 51 98243-2615</a>
                 </div>
                 <?php if ( isset( $_GET['contato'] ) && $_GET['contato'] === 'ok' ) : ?>

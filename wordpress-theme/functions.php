@@ -48,7 +48,7 @@ function giga_handle_contact() {
     $company = sanitize_text_field( $_POST['company'] ?? '' );
     $msg     = sanitize_textarea_field( $_POST['message'] ?? '' );
 
-    $to      = 'contato@gigainteligencia.com';
+    $to      = 'contato@gigacomercial.com';
     $subject = 'Agendar Reunião — site Gi.Ga';
     $body    = "Nome: {$name}\nEmpresa: {$company}\nE-mail: {$email}\n\n{$msg}";
     $headers = array( 'Reply-To: ' . $email );
