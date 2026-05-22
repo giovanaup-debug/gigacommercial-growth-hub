@@ -26,8 +26,8 @@ export function Footer() {
             <h4 className="text-xs uppercase tracking-wider text-primary font-semibold mb-3">Contato</h4>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:contato@gigainteligencia.com" className="inline-flex items-center gap-2 hover:text-primary transition">
-                  <Mail className="size-3.5" /> contato@gigainteligencia.com
+                <a href="mailto:contato@gigacomercial.com" className="inline-flex items-center gap-2 hover:text-primary transition">
+                  <Mail className="size-3.5" /> contato@gigacomercial.com
                 </a>
               </li>
               <li>

@@ -21,7 +21,7 @@
                 <div>
                     <h4>Contato</h4>
                     <ul>
-                        <li><a href="mailto:contato@gigainteligencia.com">✉ contato@gigainteligencia.com</a></li>
+                        <li><a href="mailto:contato@gigacomercial.com">✉ contato@gigacomercial.com</a></li>
                         <li><a href="https://wa.me/5551982432615" target="_blank" rel="noreferrer">☎ +55 51 98243-2615</a></li>
                     </ul>
                 </div>
