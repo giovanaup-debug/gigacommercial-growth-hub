@@ -27,12 +27,10 @@ export function Contact() {
     }
     setErrors({});
     setLoading(true);
-    const body = encodeURIComponent(
-      `Nome: ${result.data.name}\nEmpresa: ${result.data.company}\nE-mail: ${result.data.email}\n\n${result.data.message}`
+    const text = encodeURIComponent(
+      `Olá! Me chamo ${result.data.name} e represento a empresa ${result.data.company}.\n\n${result.data.message}\n\nE-mail: ${result.data.email}`
     );
-    window.location.href = `mailto:contato@gigacomercial.com?subject=${encodeURIComponent(
-      "Agendar Reunião — site Gi.Ga"
-    )}&body=${body}`;
+    window.open(`https://wa.me/5551982432615?text=${text}`, "_blank", "noopener,noreferrer");
     setTimeout(() => {
       setLoading(false);
       setSent(true);
