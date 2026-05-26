@@ -37,14 +37,14 @@ export function About() {
               className="w-full rounded-3xl ring-soft border border-teal-soft/60"
             />
             <div className="absolute -bottom-6 -right-6 hidden sm:block bg-primary text-primary-foreground rounded-2xl p-5 ring-soft">
-              <div className="text-3xl font-bold">+30</div>
-              <div className="text-xs uppercase tracking-wider opacity-80 mt-1">anos somados</div>
+              <div className="text-3xl font-bold">+15</div>
+              <div className="text-xs uppercase tracking-wider opacity-80 mt-1">&nbsp; &nbsp; &nbsp;ANOS</div>
             </div>
           </div>
           <div className="reveal">
             <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">Quem somos</span>
             <h2 className="mt-3 text-3xl sm:text-5xl font-bold">
-              <span className="text-accent-grad">+30 anos</span> de experiência somados em vendas consultivas.
+              <span className="text-accent-grad">+15 anos</span> de experiência em vendas consultivas.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Unimos estratégia e execução para construir relacionamentos consultivos e

@@ -1,5 +1,5 @@
 const stats = [
-  { k: "+30", v: "Anos de experiência somados" },
+  { k: "+15", v: "Anos de experiência" },
   { k: "+50", v: "Clientes B2B atendidos" },
   { k: "+100", v: "Projetos comerciais entregues" },
   { k: "8x", v: "Crescimento médio do pipeline" },

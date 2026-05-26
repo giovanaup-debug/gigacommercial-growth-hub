@@ -21,7 +21,7 @@ export function Hero() {
 
           <p className="reveal mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
             A Gi.Ga | Inteligência Comercial transforma sua força de vendas através de estratégia inteligente, previsibilidade
-            e relacionamento de alto valor. Mais de 30 anos de experiência somados em vendas consultivas.
+            e relacionamento de alto valor. Mais de 15 anos de experiência em vendas consultivas.
           </p>
 
           <div className="reveal mt-10 flex flex-wrap gap-3">
@@ -42,7 +42,7 @@ export function Hero() {
 
           <div className="reveal mt-12 grid grid-cols-3 gap-6 max-w-xl">
             {[
-              { k: "+30", v: "Anos de experiência somados" },
+              { k: "+15", v: "Anos de experiência" },
               { k: "B2B", v: "Vendas consultivas" },
               { k: "PMEs", v: "Atendimento especializado para empresas de Pequeno e Médio porte" },
             ].map((s) => (
