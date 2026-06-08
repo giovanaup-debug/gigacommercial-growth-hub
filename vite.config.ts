@@ -1,8 +1,15 @@
+import { defineConfig } from 'vite';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
-// Importa o pacote usando a estrutura segura de CommonJS aceita pelo Node
-const pkg = require('@lovable.dev/vite-tanstack-config');
+// Carrega o pacote de configuração do Lovable
+const configPackage = require('@lovable.dev/vite-tanstack-config');
 
-// Exporta a configuração padrão exatamente como o framework espera
-export default pkg.tanstackViteConfig;
+// O pacote geralmente exporta a configuração como uma função ou um objeto específico.
+// Usamos o defineConfig do Vite para envelopar e retornar a configuração correta.
+export default defineConfig(() => {
+  if (typeof configPackage.tanstackViteConfig === 'function') {
+    return configPackage.tanstackViteConfig();
+  }
+  return configPackage.tanstackViteConfig || {};
+});
