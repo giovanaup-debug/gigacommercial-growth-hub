@@ -1,11 +1,15 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import { resolve } from "path";
-import { getConfig } from "@lovable.dev/vite-tanstack-config";
+// Importa o pacote completo como padrão para não quebrar o CommonJS
+import lovableConfigPkg from "@lovable.dev/vite-tanstack-config";
+
+// Extrai a função de forma segura
+const { getConfig } = lovableConfigPkg;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./", // <--- ISSO CORRIGE A TELA BRANCO: força caminhos relativos para o CSS e JS no navegador
+  base: "./", // Garante caminhos relativos para os arquivos CSS e JS no navegador
   ...getConfig(),
   plugins: [
     react(),
