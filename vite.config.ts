@@ -1,15 +1,25 @@
 import { defineConfig } from 'vite';
 import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+import path from 'path';
 
-// Carrega o pacote de configuração do Lovable
+const require = createRequire(import.meta.url);
 const configPackage = require('@lovable.dev/vite-tanstack-config');
 
-// O pacote geralmente exporta a configuração como uma função ou um objeto específico.
-// Usamos o defineConfig do Vite para envelopar e retornar a configuração correta.
 export default defineConfig(() => {
-  if (typeof configPackage.tanstackViteConfig === 'function') {
-    return configPackage.tanstackViteConfig();
-  }
-  return configPackage.tanstackViteConfig || {};
+  // Pega a configuração base do Lovable
+  const baseConfig = typeof configPackage.tanstackViteConfig === 'function'
+    ? configPackage.tanstackViteConfig()
+    : (configPackage.tanstackViteConfig || {});
+
+  // Injeta explicitamente o mapeamento do caractere '@' para a pasta 'src'
+  return {
+    ...baseConfig,
+    resolve: {
+      ...baseConfig.resolve,
+      alias: {
+        ...baseConfig.resolve?.alias,
+        '@': path.resolve(__dirname, './src'),
+      },
+    },
+  };
 });
