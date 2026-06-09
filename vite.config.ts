@@ -1,35 +1,20 @@
 import { defineConfig } from 'vite';
-import { createRequire } from 'module';
+import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
-const require = createRequire(import.meta.url);
-const configPackage = require('@lovable.dev/vite-tanstack-config');
-
-export default defineConfig(() => {
-  const baseConfig = typeof configPackage.tanstackViteConfig === 'function'
-    ? configPackage.tanstackViteConfig()
-    : (configPackage.tanstackViteConfig || {});
-
-  return {
-    ...baseConfig,
-    resolve: {
-      ...baseConfig.resolve,
-      alias: {
-        ...baseConfig.resolve?.alias,
-        '@': path.resolve(__dirname, './src'),
-      },
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
-    server: {
-      ...baseConfig.server,
-      allowedHosts: ['.onrender.com', 'gigacommercial-growth-hub.onrender.com'],
-    },
-    // Protege o build impedindo que ele barre módulos nativos de servidor como o async_hooks
-    build: {
-      ...baseConfig.build,
-      rollupOptions: {
-        ...baseConfig.build?.rollupOptions,
-        external: ['node:async_hooks', 'async_hooks'],
-      },
-    },
-  };
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 10000,
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 10000,
+  }
 });
