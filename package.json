@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
+  "dev": "vinxi dev",
+  "build": "vinxi build",
+  "start": "vinxi start"
+}
   "dependencies": {
     "@tanstack/react-query": "^5.56.0",
     "@tanstack/react-router": "^1.57.0",
