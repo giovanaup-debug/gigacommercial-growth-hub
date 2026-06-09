@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: giga-commercial-hub
+    runtime: static
+    buildCommand: npm run build
+    publishDir: dist
+    routes:
+      # Regra crucial exigida pela Lovable: redireciona todas as rotas para o index.html
+      - from: /*
+        to: /index.html
+        status: 200
