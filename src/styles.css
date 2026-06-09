@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+/* Avisa ao Tailwind v4 para varrer a pasta src e compilar todo o design customizado */
+@source "../src";
+@source "./**/*.{js,ts,jsx,tsx}";
