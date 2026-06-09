@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  /* Configuração limpa das cores oficiais extraídas do Lovable */
+  /* 1. Mapeamento exato das variáveis de cor que o Lovable usa */
   --color-background: #ffffff;
   --color-foreground: #0f172a;
-  --color-primary: #115e59;         /* Verde-petróleo dos botões */
+  
+  --color-primary: #115e59;
   --color-primary-foreground: #ffffff;
-  --color-secondary: #0b0f19;       /* Grafite escuro das seções escuras */
+  
+  --color-secondary: #0b0f19;
   --color-secondary-foreground: #ffffff;
-  --color-muted: #f8fafc;           /* Tom gelo dos blocos claros */
+  
+  --color-muted: #f8fafc;
   --color-muted-foreground: #475569;
+  
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
+  
+  --color-border: #e2e8f0;
 }
 
 @layer base {
-  /* Aplica o grid sutil apenas no fundo do site, sem travar as seções internas */
+  /* 2. Amarração global das variáveis para impedir que o modo escuro/claro herde lixo */
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --primary: #115e59;
+    --secondary: #0b0f19;
+    --muted: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+  }
+
   html, body, #root {
-    background-color: #ffffff;
-    color: #0f172a;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     font-family: system-ui, -apple-system, sans-serif;
   }
 
   body {
+    /* 3. O grid sutil da GiGa aplicado sem travar os blocos internos */
     background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
