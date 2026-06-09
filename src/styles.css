@@ -1,67 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  /* Força a paleta clara e executiva da GiGa no ecossistema do Tailwind v4 */
+  /* Definição rigorosa das cores oficiais da GiGa */
   --color-background: #ffffff;
   --color-foreground: #0f172a;
   
   --color-primary: #115e59;         /* Verde-petróleo profundo dos botões */
   --color-primary-foreground: #ffffff;
   
-  --color-secondary: #f8fafc;       /* Fundo claro para os elementos secundários */
-  --color-secondary-foreground: #0f172a;
+  --color-secondary: #0b0f19;       /* Grafite/Preto profundo para as seções escuras */
+  --color-secondary-foreground: #ffffff;
   
-  --color-muted: #f1f5f9;
+  --color-muted: #f8fafc;           /* Tom gelo claro para os blocos claros */
   --color-muted-foreground: #475569;
   
-  --color-accent: #14b8a6;
-  --color-accent-foreground: #0f172a;
-
   --color-border: #e2e8f0;
   --color-input: #e2e8f0;
   --color-ring: #115e59;
 }
 
 @layer base {
-  /* Garante o fundo totalmente branco/claro em toda a árvore do site */
-  html, body, #root, main, section {
-    background-color: #ffffff !important;
-    color: #0f172a !important;
+  /* Fundo base do site é claro com o grid sutil */
+  html, body, #root {
+    background-color: #ffffff;
+    color: #0f172a;
     font-family: system-ui, -apple-system, sans-serif;
   }
 
   body {
-    /* Aplica o grid sutil e elegante em verde-petróleo muito suave sobre o fundo branco */
-    background-image: linear-gradient(to right, rgba(17, 94, 89, 0.03) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(17, 94, 89, 0.03) 1px, transparent 1px) !important;
+    background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px) !important;
     background-size: 40px 40px !important;
-    background-repeat: repeat !important;
   }
 
-  /* Força os títulos a manterem a cor escura corporativa da imagem de referência */
-  h1, h2, h3, h4, p, span {
-    color: #0f172a !important;
-  }
-
-  /* Ajusta especificamente os botões para usarem o preenchimento verde-petróleo correto */
+  /* Garante o comportamento correto dos botões da marca */
   .bg-primary, button[class*="bg-primary"] {
     background-color: #115e59 !important;
     color: #ffffff !important;
   }
+}
 
-  /* Corrige os cards (como os de depoimento ou blocos de texto) para ficarem brancos com bordas suaves, eliminando o fundo escuro */
-  .bg-card, .bg-slate-900, [class*="bg-slate-"], [class*="bg-background"] {
+@layer utilities {
+  /* FORÇA AS SEÇÕES ESCURAS (Como as das imagens 6c59e7 e 6c571a) */
+  .bg-secondary, .bg-slate-950, .bg-black, [class*="bg-slate-900"] {
+    background-color: #0b0f19 !important;
+    color: #ffffff !important;
+  }
+  
+  /* Garante que os textos dentro das seções escuras fiquem brancos/claros */
+  .bg-secondary h1, .bg-secondary h2, .bg-secondary h3, .bg-secondary p, .bg-secondary span,
+  .bg-slate-950 h1, .bg-slate-950 h2, .bg-slate-950 h3, .bg-slate-950 p, .bg-slate-950 span {
+    color: #ffffff !important;
+  }
+
+  /* FORÇA AS SEÇÕES CLARAS / CARDS CLAROS (Como os depoimentos) */
+  .bg-card, .bg-white, .bg-background {
     background-color: #ffffff !important;
     color: #0f172a !important;
     border-color: #e2e8f0 !important;
   }
-
-  /* Mantém apenas os blocos de destaque estritamente necessários com fundo escuro, caso existam na referência */
-  .giga-stat-dark {
-    background-color: #0f172a !important;
-    color: #ffffff !important;
+  
+  .bg-card h1, .bg-card h2, .bg-card h3, .bg-card p,
+  .bg-white h1, .bg-white h2, .bg-white h3, .bg-white p {
+    color: #0f172a !important;
   }
 }
 
-/* Garante que o Vite faça a varredura completa em todos os ficheiros de componentes */
+/* Varredura completa para o Vite costurar as classes */
 @source "./**/*.{ts,tsx,js,jsx}";
