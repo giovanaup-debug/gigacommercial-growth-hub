@@ -19,10 +19,17 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, './src'),
       },
     },
-    // Libera a trava de segurança para o servidor aceitar conexões vindas da Render
     server: {
       ...baseConfig.server,
       allowedHosts: ['.onrender.com', 'gigacommercial-growth-hub.onrender.com'],
+    },
+    // Protege o build impedindo que ele barre módulos nativos de servidor como o async_hooks
+    build: {
+      ...baseConfig.build,
+      rollupOptions: {
+        ...baseConfig.build?.rollupOptions,
+        external: ['node:async_hooks', 'async_hooks'],
+      },
     },
   };
 });
