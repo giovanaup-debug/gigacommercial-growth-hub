@@ -1,49 +1,57 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ativa explicitamente os tamanhos de tela padrões do Tailwind v4 */
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-
-  /* Cores oficiais da GiGa extraídas do Lovable */
+  /* A Paleta de Cores Fiel da GiGa Inteligência Comercial */
   --color-background: #ffffff;
   --color-foreground: #0f172a;
   
+  /* Verde-Petróleo Executivo dos Botões e Links Principais */
   --color-primary: color-mix(in srgb, #115e59 100%, transparent);
   --color-primary-foreground: #ffffff;
   
+  /* Grafite Profundo / Quase Preto das Seções Escuras (Metodologia e Contato) */
   --color-secondary: color-mix(in srgb, #0b0f19 100%, transparent);
   --color-secondary-foreground: #ffffff;
   
+  /* Tom Gelo Suave das Seções Claras Intercaladas (Desafios e Como Atuamos) */
   --color-muted: #f8fafc;
   --color-muted-foreground: #475569;
 
+  /* Base dos Cards de Destaque (Brancos com bordas limpas) */
   --color-card: #ffffff;
   --color-card-foreground: #0f172a;
 
+  /* Elementos de Linha e Input */
   --color-border: #e2e8f0;
   --color-input: #e2e8f0;
   --color-ring: #115e59;
 }
 
 @layer base {
+  /* Garante que o motor do Shadcn UI/Lovable puxe as mesmas variáveis do tema */
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --primary: #115e59;
+    --secondary: #0b0f19;
+    --muted: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+  }
+
   html, body, #root {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: system-ui, -apple-system, sans-serif;
   }
 
   body {
-    /* O grid sutil de fundo */
+    /* O grid cinza-petróleo ultra sutil que envelopa o fundo claro */
     background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }
 
-/* Aponta diretamente para a varredura absoluta que o motor do Vite exige */
+/* Vincula o HTML e os componentes para a compilação de produção sem perdas */
 @source "../index.html";
 @source ".";
