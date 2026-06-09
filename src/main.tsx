@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from '@tanstack/react-router'
 import { router } from './router'
-import './styles.css' // O Tailwind v4 será injetado por aqui de forma nativa
+import './styles.css' // Importação crucial para o Tailwind v4 envelopar o design
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
