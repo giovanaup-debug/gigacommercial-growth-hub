@@ -1,98 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  /* Paleta Executiva da GiGa */
-  --color-primary: #115e59;         /* Verde-petróleo dos botões */
+  /* Mantém as definições base do Tailwind v4 */
+  --color-primary: #115e59;         
   --color-primary-foreground: #ffffff;
-  --color-secondary: #0b0f19;       /* Cinza chumbo profundo */
+  --color-secondary: #0b0f19;       
   --color-secondary-foreground: #ffffff;
-  --color-muted: #f8fafc;           /* Tom gelo claro */
+  --color-muted: #f8fafc;           
   --color-muted-foreground: #475569;
-}
-
-@layer base {
-  html, body, #root {
-    background-color: #ffffff !important;
-    color: #0f172a !important;
-    font-family: system-ui, -apple-system, sans-serif;
-  }
-
-  body {
-    /* O grid sutil de fundo */
-    background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px) !important;
-    background-size: 40px 40px !important;
-  }
 }
 
 @layer utilities {
   /* ==========================================
-     1. CORREÇÃO DAS SEÇÕES ESCURAS (Chumbo)
-     Metodologia e "Vamos Construir Juntos"
+     1. AJUSTE APENAS DOS FUNDOS ESCUROS (Cinza Chumbo)
+     Metodologia, "Vamos Construir Juntos" e Formulário
      ========================================== */
   section.bg-secondary, 
   section.bg-slate-950, 
   [class*="bg-slate-900"],
   .bg-secondary,
   form {
-    background-color: #0b0f19 !important; /* Força o cinza chumbo original */
-    color: #ffffff !important;
-  }
-
-  /* Garante legibilidade total: força todos os textos dentro do chumbo a ficarem brancos */
-  section.bg-secondary *, 
-  section.bg-slate-950 *, 
-  [class*="bg-slate-900"] *, 
-  .bg-secondary *,
-  form * {
-    color: #ffffff !important;
-  }
-
-  /* Preserva o verde-água/teal de destaque das etapas da Metodologia */
-  .text-teal-400, [class*="text-teal-"], [class*="text-accent"] {
-    color: #2dd4bf !important;
+    background-color: #0b0f19 !important;
   }
 
   /* ==========================================
-     2. CORREÇÃO DAS SEÇÕES CLARAS (Gelo/Branco)
-     Desafios, Como Atuamos e Cards
+     2. AJUSTE APENAS DOS FUNDOS CLAROS (Tom Gelo)
+     Desafios, Como Atuamos e Blocos de Suporte
      ========================================== */
-  section.bg-muted, .bg-muted, section[class*="bg-slate-50"] {
-    background-color: #f1f5f9 !important; /* Tom gelo limpo, elimina o cinza feio */
-    color: #0f172a !important;
+  section.bg-muted, 
+  .bg-muted, 
+  section[class*="bg-slate-50"] {
+    background-color: #f1f5f9 !important;
   }
 
-  section.bg-muted *, .bg-muted * {
-    color: #0f172a !important;
-  }
-
-  /* Cards internos (Depoimentos e Soluções) sempre brancos com texto escuro */
-  .bg-card, .bg-white, [class*="bg-white/"] {
-    background-color: #ffffff !important;
-    color: #0f172a !important;
-    border: 1px solid #e2e8f0 !important;
-  }
-
-  .bg-card *, .bg-white * {
-    color: #0f172a !important;
-  }
-
-  /* ==========================================
-     3. BOTÕES E INPUTS DO FORMULÁRIO
-     ========================================== */
-  .bg-primary, button[class*="bg-primary"], button.bg-teal-600 {
-    background-color: #115e59 !important;
-    color: #ffffff !important;
-  }
-
-  /* Torna os campos de texto do formulário visíveis sobre o fundo chumbo */
+  /* Campos do formulário para dar contraste sobre o fundo chumbo */
   input, textarea, select {
-    background-color: rgba(255, 255, 255, 0.07) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
   }
 }
 
-/* Mapeamento absoluto para o compilador do Vite */
+/* Mantém o mapeamento de build do Vite */
 @source "../index.html";
 @source ".";
