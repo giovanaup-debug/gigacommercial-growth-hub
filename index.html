@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GiGa Inteligência Comercial</title>
-  </head>
-  <body class="bg-background text-foreground antialiased min-h-screen">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+  <style>
+  /* ====================================================
+     FORÇAMENTO DE CORES DE FUNDO DA GIGA - IDENTIDADE REAL
+     ==================================================== */
+  
+  /* 1. Altera o cinza-rato feio da seção Desafios para o Cinza Chumbo Real */
+  #desafios, 
+  section:has(#desafios),
+  .bg-muted,
+  [class*="bg-slate-50"] {
+    background-color: #0b0f19 !important;
+  }
+
+  /* 2. Seção Metodologia em Fundo Preto Absoluto */
+  #metodologia,
+  section:has(#metodologia),
+  .bg-slate-950 {
+    background-color: #05070c !important;
+  }
+
+  /* Cards internos da metodologia em cinza chumbo */
+  section:has(#metodologia) .bg-card,
+  section:has(#metodologia) [class*="bg-card"] {
+    background-color: #0b0f19 !important;
+  }
+
+  /* 3. Última seção (Vamos construir juntos): Chumbo profundo para o texto branco aparecer */
+  #contato,
+  section:has(form),
+  .bg-secondary {
+    background-color: #0b0f19 !important;
+  }
+
+  /* Força o bloco inteiro da esquerda e o formulário a ficarem no chumbo */
+  section:has(form) > div,
+  .bg-secondary > div {
+    background-color: #0b0f19 !important;
+  }
+</style>
