@@ -7,9 +7,4 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  resolve: {
-    alias: {
-      '@': '/src', // Sintaxe moderna para ESM que elimina o uso de __dirname
-    },
-  },
 });
