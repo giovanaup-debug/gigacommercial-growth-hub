@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cores convertidas para o padrão de leitura e cálculo de opacidade do Tailwind v4 */
+  /* Cores oficiais da GiGa compatíveis com os modificadores do button.tsx */
   --color-background: #ffffff;
   --color-foreground: #0f172a;
   
-  --color-primary: color-mix(in srgb, #115e59 100%, transparent); /* Permite hover:bg-primary/90 */
+  --color-primary: color-mix(in srgb, #115e59 100%, transparent);
   --color-primary-foreground: #ffffff;
   
-  --color-secondary: color-mix(in srgb, #0b0f19 100%, transparent); /* Permite hover:bg-secondary/80 */
+  --color-secondary: color-mix(in srgb, #0b0f19 100%, transparent);
   --color-secondary-foreground: #ffffff;
   
   --color-muted: #f8fafc;
@@ -27,15 +27,35 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
-    /* O grid sutil da GiGa aplicado de forma leve */
+    /* O grid sutil característico do projeto */
     background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }
 
-/* Faz o Vite ler as classes geradas dinamicamente pelo CVA do button.tsx */
+@layer utilities {
+  /* BLINDAGEM DO HOOK useReveal() */
+  /* Impede que o Tailwind v4 oculte permanentemente as seções no build de produção */
+  .reveal-element {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .reveal-hidden {
+    opacity: 0 !important;
+    transform: translateY(20px);
+  }
+  
+  .reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+/* Força o compilador do Vite a cruzar o index.html com todos os componentes injetados no index.tsx */
 @source "./**/*.{ts,tsx,js,jsx}";
