@@ -1,10 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import tailwindcss from '@tailwindcss/vite';
+import { fileURLToPath } from 'url';
 
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
   ],
+  resolve: {
+    alias: {
+      // Mapeia o caractere '@' diretamente para a pasta '/src' de forma segura
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
 });
