@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cores oficiais da GiGa compatíveis com os modificadores do button.tsx */
+  /* Ativa explicitamente os tamanhos de tela padrões do Tailwind v4 */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Cores oficiais da GiGa extraídas do Lovable */
   --color-background: #ffffff;
   --color-foreground: #0f172a;
   
@@ -27,35 +34,16 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: system-ui, -apple-system, sans-serif;
-    scroll-behavior: smooth;
   }
 
   body {
-    /* O grid sutil característico do projeto */
+    /* O grid sutil de fundo */
     background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }
 
-@layer utilities {
-  /* BLINDAGEM DO HOOK useReveal() */
-  /* Impede que o Tailwind v4 oculte permanentemente as seções no build de produção */
-  .reveal-element {
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    will-change: opacity, transform;
-  }
-  
-  .reveal-hidden {
-    opacity: 0 !important;
-    transform: translateY(20px);
-  }
-  
-  .reveal-visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-}
-
-/* Força o compilador do Vite a cruzar o index.html com todos os componentes injetados no index.tsx */
-@source "./**/*.{ts,tsx,js,jsx}";
+/* Aponta diretamente para a varredura absoluta que o motor do Vite exige */
+@source "../index.html";
+@source ".";
