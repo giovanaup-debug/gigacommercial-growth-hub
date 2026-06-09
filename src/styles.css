@@ -1,26 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  /* Paleta Executiva Oficial da GiGa Comercial */
+  /* Definição rigorosa das cores oficiais da GiGa resgatadas do Lovable */
   --color-background: #ffffff;
   --color-foreground: #0f172a;
-  
-  --color-primary: #115e59;         /* Verde-petróleo profundo dos botões */
   --color-primary-foreground: #ffffff;
   
-  --color-secondary: #0b0f19;       /* O grafite escuro/quase preto original das seções */
+  --color-secondary: #0b0f19;       /* Grafite/Preto profundo para as seções escuras */
   --color-secondary-foreground: #ffffff;
   
-  --color-muted: #f8fafc;           /* Tom gelo claro para os cards de Soluções */
+  --color-muted: #f8fafc;           /* Tom gelo claro para os blocos claros */
   --color-muted-foreground: #475569;
-  
-  --color-border: #e2e8f0;
-  --color-input: #e2e8f0;
-  --color-ring: #115e59;
 }
 
 @layer base {
-  /* Configuração Global e Grid Sutil */
+  /* Fundo base do site claro e configuração global */
   html, body, #root {
     background-color: #ffffff;
     color: #0f172a;
@@ -28,12 +22,13 @@
   }
 
   body {
+    /* Recria o padrão de grid sutil da GiGa Comercial */
     background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px) !important;
     background-size: 40px 40px !important;
   }
 
-  /* Fix para garantir que textos gerais não sumam */
+  /* Fix para garantir que textos gerais não sumam por herança */
   p, span, li {
     color: inherit;
   }
@@ -41,67 +36,51 @@
 
 @layer utilities {
   /* 1. SEÇÕES ESCURAS (Metodologia e Formulário de Contato) */
-  /* Força o fundo escuro original do Lovable e joga o texto para branco */
-  section.bg-secondary, 
-  section.bg-slate-950, 
-  [class*="bg-slate-900"],
-  form,
-  .bg-secondary {
+  .bg-secondary, .bg-slate-950, .bg-black, [class*="bg-slate-900"],
+  section.bg-secondary, section.bg-slate-950, form {
     background-color: #0b0f19 !important;
     color: #ffffff !important;
   }
 
   /* Garante que os títulos e textos das seções escuras fiquem 100% brancos e legíveis */
-  section.bg-secondary *, 
-  section.bg-slate-950 *, 
-  [class*="bg-slate-900"] *,
-  .bg-secondary * {
+  section.bg-secondary *, section.bg-slate-950 *, [class*="bg-slate-900"] *, .bg-secondary * {
     color: #ffffff !important;
   }
   
-  /* Exceção para o verde de destaque da Metodologia */
+  /* Exceção necessária para manter o verde de destaque na Metodologia */
   .text-teal-400, .text-accent, [class*="text-teal-"], [class*="text-emerald-"] {
     color: #2dd4bf !important;
   }
 
   /* 2. SEÇÕES CLARAS COM FUNDO CINZA CLARO / GELO (Desafios e Como Atuamos) */
-  /* Corrige aquela faixa cinza escura feia, voltando para o tom gelo corporativo */
-  section.bg-muted, 
-  section[class*="bg-slate-100"], 
-  section[class*="bg-slate-50"],
-  .bg-muted {
+  section.bg-muted, section[class*="bg-slate-100"], section[class*="bg-slate-50"], .bg-muted {
     background-color: #f1f5f9 !important;
     color: #0f172a !important;
   }
 
-  section.bg-muted *, 
-  .bg-muted * {
+  section.bg-muted *, .bg-muted * {
     color: #0f172a !important;
   }
 
-  /* 3. CARDS EM DESTAQUE (Brancos com Sombra Suave) */
-  /* Mantém os cards de Soluções, Desafios e Quem Somos totalmente limpos */
-  .bg-card, 
-  .bg-white,
-  [class*="bg-white/"] {
+  /* 3. CARDS EM DESTAQUE E DEPOIMENTOS (Brancos com Sombra Suave) */
+  .bg-card, .bg-white, .bg-background, [class*="bg-white/"] {
     background-color: #ffffff !important;
     color: #0f172a !important;
     border: 1px solid #e2e8f0 !important;
   }
 
-  .bg-card *, 
-  .bg-white * {
+  .bg-card *, .bg-white * {
     color: #0f172a !important;
   }
 
   /* 4. BOTÕES E CAMPOS DE INPUT DO FORMULÁRIO */
-  /* Força os botões primários a usarem o Verde-Petróleo */
+  /* Força os botões primários a usarem o Verde-Petróleo Oficial da GiGa */
   .bg-primary, button[class*="bg-primary"], .bg-teal-600 {
     background-color: #115e59 !important;
     color: #ffffff !important;
   }
 
-  /* Garante que os inputs do formulário fiquem visíveis (fundo escuro, borda cinza, texto branco) */
+  /* Garante que os inputs do formulário fiquem visíveis sobre o fundo escuro */
   input, textarea, select {
     background-color: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -113,5 +92,5 @@
   }
 }
 
-/* Garante a compilação completa pelo Vite */
+/* Garante a compilação completa e varredura pelo Vite */
 @source "./**/*.{ts,tsx,js,jsx}";
