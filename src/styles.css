@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cores customizadas da marca GiGa */
+  /* Definição exata das cores executivas da GiGa para o Tailwind v4 */
   --color-background: #f8fafc;
   --color-foreground: #0f172a;
   
-  --color-primary: #115e59;         /* Verde Petróleo principal dos botões */
+  --color-primary: #115e59;         /* O verde-petróleo profundo dos botões */
   --color-primary-foreground: #ffffff;
   
-  --color-secondary: #0f172a;       /* Grafite escuro para realces e títulos */
-  --color-secondary-foreground: #f8fafc;
+  --color-secondary: #0f172a;       /* O grafite escuro dos cards de estatísticas */
+  --color-secondary-foreground: #ffffff;
   
   --color-muted: #f1f5f9;
   --color-muted-foreground: #475569;
   
-  --color-accent: #14b8a6;          /* Verde mais claro para detalhes e degradês */
+  --color-accent: #14b8a6;          /* Verde mais claro para destaques e links */
   --color-accent-foreground: #0f172a;
 
   --color-border: #e2e8f0;
@@ -24,13 +24,21 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground antialiased;
-    /* Injeta o fundo quadriculado sutil idêntico ao original do Lovable */
-    background-image: linear-gradient(to right, rgba(17, 94, 89, 0.04) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(17, 94, 89, 0.04) 1px, transparent 1px);
+    background-color: #f8fafc !important;
+    color: #0f172a;
+    font-family: system-ui, -apple-system, sans-serif;
+    
+    /* Recria o fundo quadriculado sutil e elegante do Lovable em todo o site */
+    background-image: linear-gradient(to right, rgba(17, 94, 89, 0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(17, 94, 89, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
+  }
+
+  /* Garante que nenhuma seção force fundos cinzas escuros indesejados */
+  section {
+    background-color: transparent !important;
   }
 }
 
-/* Força o compilador do Vite a amarrar essas cores a todos os componentes da pasta site e ui */
+/* Força o Vite a injetar essas configurações em todos os arquivos de componentes */
 @source "./**/*.{ts,tsx,js,jsx}";
