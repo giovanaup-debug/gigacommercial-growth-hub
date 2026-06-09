@@ -1,82 +1,20 @@
 @import "tailwindcss";
 
-/* ── 1. VARIÁVEIS DE DESIGN DA GIGA (Verde-Petróleo e Chumbo) ── */
-:root {
-  --bg-base:          #ffffff;   /* Fundo geral */
-  --bg-section-alt:   #0b0f19;   /* Cinza chumbo profundo para seções escuras */
-  --bg-section-light: #f1f5f9;   /* Tom gelo limpo para as seções claras */
-  --bg-card:          #ffffff;   
-  
-  /* Sua cor de destaque - Verde Petróleo Original */
-  --accent:           #115e59;   
-  --accent-light:     #147b74;   
-  --accent-muted:     rgba(17, 94, 89, 0.1); 
-  --accent-border:    rgba(17, 94, 89, 0.3); 
+@theme {
+  --color-primary: #115e59;         /* Seu verde-petróleo dos botões */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #0b0f19;       /* Seu cinza chumbo oficial */
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #f8fafc;           /* Tom gelo claro */
+  --color-muted-foreground: #475569;
 }
 
-/* ── 2. PRIMEIRA FOTO E DESAFIOS (Cinza Chumbo) ── */
-section.bg-muted,
-.bg-muted,
-section:has(#desafios),
-[class*="bg-slate-50"] {
-  background-color: var(--bg-section-alt) !important;
-}
-
-/* ── 3. SEÇÃO METODOLOGIA (Preto/Chumbo conforme solicitado) ── */
-section:has(#metodologia),
-section.bg-slate-950,
-[class*="bg-slate-900"] {
-  background-color: #05070c !important; /* Fundo quase preto */
-}
-
-/* Cards internos da metodologia em cinza chumbo */
-section:has(#metodologia) .bg-card,
-section:has(#metodologia) [class*="bg-card"] {
-  background-color: var(--bg-section-alt) !important;
-}
-
-/* ── 4. ÚLTIMA PARTE / VAMOS CONSTRUIR JUNTOS ── */
-section:has(form),
-section.bg-secondary,
-.bg-secondary {
-  background-color: var(--bg-section-alt) !important;
-}
-
-section:has(form) > div,
-section.bg-secondary > div {
-  background-color: var(--bg-section-alt) !important;
-}
-
-/* ── 5. SEUS BOTÕES (Preservando o Verde Original) ── */
-.bg-primary, 
-button[class*="bg-primary"], 
-button.bg-teal-600, 
-[class*="bg-teal-"],
-.bg-teal-900 {
-  background-color: var(--accent) !important;
-  color: #ffffff !important;
-}
-
-button[class*="bg-primary"]:hover {
-  background-color: var(--accent-light) !important;
-}
-
-/* ── 6. INPUTS DO FORMULÁRIO ── */
-input, textarea, select {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-}
-
-/* ── 7. REGRAS DE COMPILAÇÃO DO TAILWIND V4 ── */
-:root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --primary: 171.4 68.8% 21.8%; /* #115e59 em HSL */
-  --secondary: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 171.4 68.8% 21.8%;
+@layer base {
+  html, body, #root {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
 }
 
 @source "../index.html";
