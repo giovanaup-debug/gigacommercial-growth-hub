@@ -11,10 +11,12 @@
   "dependencies": {
     "@tanstack/react-query": "^5.56.0",
     "@tanstack/react-router": "^1.57.0",
+    "@tanstack/start": "^1.57.0",
     "lucide-react": "^0.446.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tw-animate-css": "latest"
+    "tw-animate-css": "latest",
+    "vinxi": "^0.5.11"
   },
   "devDependencies": {
     "@lovable.dev/vite-tanstack-config": "latest",
