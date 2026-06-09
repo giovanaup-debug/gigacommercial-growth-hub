@@ -1,27 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  /* Configuração oficial de cores do ecossistema Tailwind v4 do Lovable */
+  /* Cores convertidas para o padrão de leitura e cálculo de opacidade do Tailwind v4 */
   --color-background: #ffffff;
   --color-foreground: #0f172a;
   
-  --color-primary: #115e59;         /* Verde-petróleo dos botões e destaques */
+  --color-primary: color-mix(in srgb, #115e59 100%, transparent); /* Permite hover:bg-primary/90 */
   --color-primary-foreground: #ffffff;
   
-  --color-secondary: #0b0f19;       /* Grafite profundo das seções escuras */
+  --color-secondary: color-mix(in srgb, #0b0f19 100%, transparent); /* Permite hover:bg-secondary/80 */
   --color-secondary-foreground: #ffffff;
   
-  --color-muted: #f8fafc;           /* Tom gelo dos blocos claros (Desafios/Como Atuamos) */
+  --color-muted: #f8fafc;
   --color-muted-foreground: #475569;
 
   --color-card: #ffffff;
   --color-card-foreground: #0f172a;
 
   --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #115e59;
 }
 
 @layer base {
-  /* Aplica o fundo e a fonte padrão sem travar ou engessar os blocos internos */
   html, body, #root {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -29,12 +30,12 @@
   }
 
   body {
-    /* O grid sutil de fundo característico do projeto */
+    /* O grid sutil da GiGa aplicado de forma leve */
     background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }
 
-/* Instancia os arquivos para o Vite compilar todas as classes do Lovable */
+/* Faz o Vite ler as classes geradas dinamicamente pelo CVA do button.tsx */
 @source "./**/*.{ts,tsx,js,jsx}";
