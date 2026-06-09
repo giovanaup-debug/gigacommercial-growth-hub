@@ -1,29 +1,36 @@
 @import "tailwindcss";
 
+@theme {
+  /* Cores customizadas da marca GiGa */
+  --color-background: #f8fafc;
+  --color-foreground: #0f172a;
+  
+  --color-primary: #115e59;         /* Verde Petróleo principal dos botões */
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #0f172a;       /* Grafite escuro para realces e títulos */
+  --color-secondary-foreground: #f8fafc;
+  
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #475569;
+  
+  --color-accent: #14b8a6;          /* Verde mais claro para detalhes e degradês */
+  --color-accent-foreground: #0f172a;
+
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #115e59;
+}
+
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* Injeta o fundo quadriculado sutil idêntico ao original do Lovable */
+    background-image: linear-gradient(to right, rgba(17, 94, 89, 0.04) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(17, 94, 89, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }
 
-/* Força a varredura e compilação de todos os estilos das páginas e componentes */
+/* Força o compilador do Vite a amarrar essas cores a todos os componentes da pasta site e ui */
 @source "./**/*.{ts,tsx,js,jsx}";
