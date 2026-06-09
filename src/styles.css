@@ -1,4 +1,4 @@
 @import "tailwindcss";
 
-/* Mapeamento direto e sem erro para o Tailwind v4 ler toda a sua pasta src */
-@source ".";
+/* Como este arquivo está dentro de /src, dizemos para o Tailwind varrer tudo nesta pasta e subpastas */
+@source "./**/*.{ts,tsx,js,jsx}";
