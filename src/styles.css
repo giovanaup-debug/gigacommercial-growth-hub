@@ -1,57 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* A Paleta de Cores Fiel da GiGa Inteligência Comercial */
-  --color-background: #ffffff;
-  --color-foreground: #0f172a;
-  
-  /* Verde-Petróleo Executivo dos Botões e Links Principais */
-  --color-primary: color-mix(in srgb, #115e59 100%, transparent);
+  /* Alinha as cores principais do tema v4 */
+  --color-primary: #115e59;
   --color-primary-foreground: #ffffff;
-  
-  /* Grafite Profundo / Quase Preto das Seções Escuras (Metodologia e Contato) */
-  --color-secondary: color-mix(in srgb, #0b0f19 100%, transparent);
+  --color-secondary: #0b0f19;
   --color-secondary-foreground: #ffffff;
-  
-  /* Tom Gelo Suave das Seções Claras Intercaladas (Desafios e Como Atuamos) */
   --color-muted: #f8fafc;
   --color-muted-foreground: #475569;
-
-  /* Base dos Cards de Destaque (Brancos com bordas limpas) */
-  --color-card: #ffffff;
-  --color-card-foreground: #0f172a;
-
-  /* Elementos de Linha e Input */
-  --color-border: #e2e8f0;
-  --color-input: #e2e8f0;
-  --color-ring: #115e59;
 }
 
 @layer base {
-  /* Garante que o motor do Shadcn UI/Lovable puxe as mesmas variáveis do tema */
+  /* Injeta as variáveis de sistema que os componentes do Lovable tentam ler */
   :root {
     --background: #ffffff;
     --foreground: #0f172a;
-    --primary: #115e59;
-    --secondary: #0b0f19;
-    --muted: #f8fafc;
+    
     --card: #ffffff;
+    --card-foreground: #0f172a;
+    
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+    
+    --primary: #115e59;
+    --primary-foreground: #ffffff;
+    
+    --secondary: #0b0f19;
+    --secondary-foreground: #ffffff;
+    
+    --muted: #f8fafc;
+    --muted-foreground: #475569;
+    
+    --accent: #14b8a6;
+    --accent-foreground: #0f172a;
+    
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    
     --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #115e59;
+    
+    --radius: 0.5rem;
   }
+}
 
+@layer base {
   html, body, #root {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: system-ui, -apple-system, sans-serif;
   }
 
   body {
-    /* O grid cinza-petróleo ultra sutil que envelopa o fundo claro */
+    /* O grid sutil característico do projeto original */
     background-image: linear-gradient(to right, rgba(17, 94, 89, 0.02) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(17, 94, 89, 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }
 
-/* Vincula o HTML e os componentes para a compilação de produção sem perdas */
+/* Garante que o Vite faça a varredura completa do index.html e dos arquivos de origem */
 @source "../index.html";
 @source ".";
