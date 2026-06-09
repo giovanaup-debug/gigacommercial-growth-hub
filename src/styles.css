@@ -1,43 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  /* Mantém as definições base do Tailwind v4 */
   --color-primary: #115e59;         
   --color-primary-foreground: #ffffff;
   --color-secondary: #0b0f19;       
-  --color-secondary-foreground: #ffffff;
   --color-muted: #f8fafc;           
-  --color-muted-foreground: #475569;
 }
 
-@layer utilities {
-  /* ==========================================
-     1. AJUSTE APENAS DOS FUNDOS ESCUROS (Cinza Chumbo)
-     Metodologia, "Vamos Construir Juntos" e Formulário
-     ========================================== */
-  section.bg-secondary, 
-  section.bg-slate-950, 
-  [class*="bg-slate-900"],
-  .bg-secondary,
-  form {
-    background-color: #0b0f19 !important;
-  }
+/* ==========================================================================
+   MUDANÇA EXCLUSIVA DE FUNDOS (Preserva 100% a cor original das letras)
+   ========================================================================== */
 
-  /* ==========================================
-     2. AJUSTE APENAS DOS FUNDOS CLAROS (Tom Gelo)
-     Desafios, Como Atuamos e Blocos de Suporte
-     ========================================== */
-  section.bg-muted, 
-  .bg-muted, 
-  section[class*="bg-slate-50"] {
-    background-color: #f1f5f9 !important;
-  }
+/* 1. Primeira foto: Transforma o cinza-rato em Cinza Chumbo Profundo (Desafios) */
+section.bg-muted,
+.bg-muted,
+section:has(#desafios),
+section:has(h2:contains("Desafios")) {
+  background-color: #0b0f19 !important;
+}
 
-  /* Campos do formulário para dar contraste sobre o fundo chumbo */
-  input, textarea, select {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  }
+/* 2. Seção Metodologia: Fundo preto/chumbo conforme solicitado */
+section:has(#metodologia),
+section:has(h2:contains("Metodologia")),
+section.bg-slate-950 {
+  background-color: #05070c !important; /* Fundo quase preto */
+}
+
+/* Blocos internos ou detalhes da metodologia em cinza chumbo */
+section:has(#metodologia) .bg-card,
+section:has(#metodologia) [class*="bg-"] {
+  background-color: #0b0f19 !important; 
+}
+
+/* 3. Última Parte (Vamos construir juntos): Garante o fundo chumbo para dar leitura ao texto branco */
+section:has(form),
+section.bg-secondary,
+.bg-secondary {
+  background-color: #0b0f19 !important;
+}
+
+/* Garante que o container do formulário e o bloco da esquerda fiquem envelopados no chumbo */
+section:has(form) > div,
+section.bg-secondary > div {
+  background-color: #0b0f19 !important;
 }
 
 /* Mantém o mapeamento de build do Vite */
