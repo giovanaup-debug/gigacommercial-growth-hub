@@ -1,18 +1,23 @@
-const steps = [
+const principles = [
   {
-    n: "01",
-    title: "Estratégia Comercial",
-    desc: "Planejamento comercial e inteligência de mercado para gerar crescimento sustentável.",
+    letter: "C",
+    title: "Cliente no centro das decisões de venda",
+    desc: "A estratégia comercial parte do contexto, das necessidades e do potencial dos clientes certos para a empresa.",
   },
   {
-    n: "02",
-    title: "Desenvolvimento de Negócios",
-    desc: "Transformação da estratégia em ação prática, prospecção ativa e ganho de tração.",
+    letter: "O",
+    title: "Operação comercial integrada",
+    desc: "Estratégia, processos, CRM, indicadores e rotinas de gestão funcionam de forma conectada entre as áreas.",
   },
   {
-    n: "03",
-    title: "Inteligência de Dados e Otimização",
-    desc: "Monitoramento de dados e KPIs para garantir previsibilidade e evolução contínua.",
+    letter: "R",
+    title: "Receita consistente e previsível",
+    desc: "A operação comercial ganha método, governança e visibilidade para orientar decisões e sustentar a geração de receita.",
+  },
+  {
+    letter: "E",
+    title: "Expansão comercial contínua",
+    desc: "Novos negócios e desenvolvimento de contas são conduzidos com inteligência, relacionamento e disciplina comercial.",
   },
 ];
 
@@ -24,28 +29,31 @@ export function Methodology() {
         <div className="max-w-2xl reveal">
           <span className="text-xs uppercase tracking-[0.2em] text-teal-soft font-semibold">Como pensamos</span>
           <h2 className="mt-3 text-3xl sm:text-5xl font-bold">
-            Nossa <span className="text-accent-grad">metodologia</span>
+            Método <span className="text-accent-grad">CORE Gi.Ga</span>
           </h2>
           <p className="mt-5 text-white/70">
-            Um framework integrado que conecta planejamento, execução e dados em um único motor de crescimento.
+            O Método CORE Gi.Ga conecta estratégia, estruturação e gestão de vendas para construir uma operação
+            comercial centrada no cliente, integrada, consistente e orientada ao crescimento.
           </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
-          {steps.map((s, i) => (
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {principles.map((p) => (
             <div
-              key={s.n}
+              key={p.letter}
               className="reveal relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-8 hover:border-teal-soft/40 transition"
             >
-              <div className="text-sm font-mono text-teal-soft">{s.n}</div>
-              <h3 className="mt-3 text-xl font-semibold">{s.title}</h3>
-              <p className="mt-3 text-sm text-white/70 leading-relaxed">{s.desc}</p>
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-teal-soft/40" />
-              )}
+              <div className="text-3xl font-mono font-bold text-teal-soft">{p.letter}</div>
+              <h3 className="mt-3 text-lg font-semibold leading-snug">{p.title}</h3>
+              <p className="mt-3 text-sm text-white/70 leading-relaxed">{p.desc}</p>
             </div>
           ))}
         </div>
+
+        <p className="reveal mt-10 max-w-3xl text-white/70">
+          Com o Método CORE, estratégia se transforma em força de vendas: uma operação comercial estruturada para
+          conquistar clientes, aumentar receita e expandir negócios.
+        </p>
       </div>
     </section>
   );
