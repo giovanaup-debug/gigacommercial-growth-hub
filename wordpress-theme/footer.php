@@ -13,7 +13,7 @@
                     <ul>
                         <li><a href="#desafios">Desafios</a></li>
                         <li><a href="#por-que">Por que a Gi.Ga</a></li>
-                        <li><a href="#metodologia">Metodologia</a></li>
+                        <li><a href="#metodologia">Método CORE Gi.Ga</a></li>
                         <li><a href="#solucoes">Soluções</a></li>
                         <li><a href="#quem-somos">Quem Somos</a></li>
                     </ul>

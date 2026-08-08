@@ -147,7 +147,7 @@ get_header();
                     <h2 style="margin-top:12px;">Nossas <span class="text-accent-grad">soluções</span></h2>
                 </div>
                 <p class="muted" style="max-width:340px;font-size:14px;">
-                    Atuação integrada da estratégia à execução dedicados ao seu crescimento.
+                    Da estratégia à execução de vendas
                 </p>
             </div>
 
