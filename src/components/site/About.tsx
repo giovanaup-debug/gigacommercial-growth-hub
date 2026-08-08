@@ -47,9 +47,10 @@ export function About() {
               <span className="text-accent-grad">+15 anos</span> de experiência em vendas consultivas.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Unimos estratégia e execução para construir relacionamentos consultivos e
-              crescimento sustentável. Atuamos lado a lado com fundadores e líderes que precisam
-              transformar venda artesanal em um processo industrial — previsível, mensurável e replicável.
+              Unimos trajetórias complementares em vendas consultivas B2B, tecnologia, serviços, gestão de operações, contas estratégicas e negociações complexas.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Essa combinação sustenta uma atuação sênior que conecta estratégia, liderança comercial e execução de vendas para fortalecer operações e gerar novas oportunidades de receita.
             </p>
             <div className="mt-8 flex gap-4">
               <div className="font-display font-bold text-lg">GIOVANA URRUTIA</div>

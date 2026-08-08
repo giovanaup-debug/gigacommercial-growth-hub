@@ -10,7 +10,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#desafios" className="hover:text-foreground transition">Desafios</a>
           <a href="#por-que" className="hover:text-foreground transition">Por que a Gi.Ga</a>
-          <a href="#metodologia" className="hover:text-foreground transition">Metodologia</a>
+          <a href="#metodologia" className="hover:text-foreground transition">Método CORE Gi.Ga</a>
           <a href="#solucoes" className="hover:text-foreground transition">Soluções</a>
           <a href="#quem-somos" className="hover:text-foreground transition">Quem Somos</a>
         </nav>
