@@ -17,7 +17,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li><a href="#desafios" className="hover:text-primary transition">Desafios</a></li>
               <li><a href="#por-que" className="hover:text-primary transition">Por que a Gi.Ga</a></li>
-              <li><a href="#metodologia" className="hover:text-primary transition">Metodologia</a></li>
+              <li><a href="#metodologia" className="hover:text-primary transition">Método CORE Gi.Ga</a></li>
               <li><a href="#solucoes" className="hover:text-primary transition">Soluções</a></li>
               <li><a href="#quem-somos" className="hover:text-primary transition">Quem Somos</a></li>
             </ul>

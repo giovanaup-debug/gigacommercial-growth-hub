@@ -19,7 +19,7 @@
         <nav class="site-nav">
             <a href="#desafios">Desafios</a>
             <a href="#por-que">Por que a Gi.Ga</a>
-            <a href="#metodologia">Metodologia</a>
+            <a href="#metodologia">Método CORE Gi.Ga</a>
             <a href="#solucoes">Soluções</a>
             <a href="#quem-somos">Quem Somos</a>
         </nav>

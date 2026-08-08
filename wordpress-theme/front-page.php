@@ -147,7 +147,7 @@ get_header();
                     <h2 style="margin-top:12px;">Nossas <span class="text-accent-grad">soluções</span></h2>
                 </div>
                 <p class="muted" style="max-width:340px;font-size:14px;">
-                    Atuação integrada da estratégia à execução dedicados ao seu crescimento.
+                    Da estratégia à execução de vendas
                 </p>
             </div>
 
@@ -238,8 +238,10 @@ get_header();
                     <span class="eyebrow">Quem somos</span>
                     <h2 style="margin-top:12px;"><span class="text-accent-grad">+30 anos</span> de experiência somados em vendas consultivas.</h2>
                     <p class="muted" style="margin-top:24px;line-height:1.7;">
-                        Unimos estratégia e execução para construir relacionamentos consultivos e crescimento sustentável.
-                        Atuamos lado a lado com fundadores e líderes que precisam transformar venda artesanal em um processo industrial — previsível, mensurável e replicável.
+                        Unimos trajetórias complementares em vendas consultivas B2B, tecnologia, serviços, gestão de operações, contas estratégicas e negociações complexas.
+                    </p>
+                    <p class="muted" style="margin-top:16px;line-height:1.7;">
+                        Essa combinação sustenta uma atuação sênior que conecta estratégia, liderança comercial e execução de vendas para fortalecer operações e gerar novas oportunidades de receita.
                     </p>
                     <div style="margin-top:32px;display:flex;gap:16px;font-weight:700;">
                         <span>GIOVANA URRUTIA</span><span class="muted">·</span><span>GABRIELA AMANDO</span>
