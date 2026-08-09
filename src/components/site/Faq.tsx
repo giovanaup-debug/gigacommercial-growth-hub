@@ -66,10 +66,13 @@ export function Faq() {
                   id={`faq-panel-${i}`}
                   role="region"
                   aria-labelledby={`faq-btn-${i}`}
-                  hidden={!isOpen}
-                  className="px-6 pb-6 sm:px-8 sm:pb-7 -mt-1"
+                  className={`grid transition-all duration-300 ease-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                 >
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl">{f.a}</p>
+                  <div className="overflow-hidden">
+                    <p className="px-6 pb-6 sm:px-8 sm:pb-7 -mt-1 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl">
+                      {f.a}
+                    </p>
+                  </div>
                 </div>
               </div>
             );
