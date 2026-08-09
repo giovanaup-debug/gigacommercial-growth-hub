@@ -5,8 +5,8 @@ import { Problem } from "@/components/site/Problem";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Methodology } from "@/components/site/Methodology";
 import { Solutions } from "@/components/site/Solutions";
-import { HowWeWork } from "@/components/site/HowWeWork";
 import { About } from "@/components/site/About";
+import { Faq } from "@/components/site/Faq";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { useReveal } from "@/hooks/use-reveal";
@@ -43,8 +43,8 @@ function Index() {
         <WhyUs />
         <Methodology />
         <Solutions />
-        <HowWeWork />
         <About />
+        <Faq />
         <Contact />
       </main>
       <Footer />
