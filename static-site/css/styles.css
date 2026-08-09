@@ -217,3 +217,23 @@ ul{margin:0;padding:0;list-style:none}
 .group-label span{font-size:11px;text-transform:uppercase;letter-spacing:.18em;font-weight:600;color:var(--primary)}
 .group-label i{flex:1;height:1px;background:var(--border)}
 .sol-head h3{margin-top:0}
+
+/* Títulos principais em blocos com linha */
+.header-block-row h2{margin-top:12px;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1.1}
+/* Desafios */
+.challenges .card h3{font-size:18px;font-weight:600;line-height:1.3}
+.challenges .card p{margin-top:8px;font-size:14px;color:var(--muted)}
+.closing-highlight{margin-top:48px}
+.closing-highlight p{font-size:clamp(18px,2.2vw,24px);font-weight:600;line-height:1.35}
+.features h3{font-size:20px;font-weight:700}
+/* FAQ */
+.faq{margin-top:56px;max-width:900px;border:1px solid var(--border);border-radius:24px;background:var(--surface);overflow:hidden}
+.faq-item + .faq-item{border-top:1px solid var(--border)}
+.faq-q{display:flex;width:100%;gap:24px;align-items:flex-start;justify-content:space-between;text-align:left;background:none;border:0;cursor:pointer;padding:20px 24px;font:inherit;font-size:17px;font-weight:600;color:inherit}
+.faq-q:focus-visible{outline:2px solid var(--primary);outline-offset:-2px}
+.faq-icon{color:var(--primary);font-size:20px;line-height:1;transition:transform .3s ease}
+.faq-q[aria-expanded="true"] .faq-icon{transform:rotate(45deg)}
+.faq-panel{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .3s ease,opacity .3s ease}
+.faq-panel.open{grid-template-rows:1fr;opacity:1}
+.faq-panel > div{overflow:hidden}
+.faq-panel p{padding:0 24px 22px;color:var(--muted);font-size:15px;line-height:1.6;max-width:70ch}
