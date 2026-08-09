@@ -52,3 +52,19 @@ form.addEventListener('submit', (e) => {
     form.reset();
   }, 600);
 });
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-q').forEach((b) => {
+      b.setAttribute('aria-expanded', 'false');
+      document.getElementById(b.getAttribute('aria-controls')).classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      panel.classList.add('open');
+    }
+  });
+});
