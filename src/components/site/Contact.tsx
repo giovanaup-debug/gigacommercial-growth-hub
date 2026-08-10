@@ -98,7 +98,7 @@ export function Contact() {
               {sent ? (
                 <><CheckCircle2 className="size-4" /> Enviado</>
               ) : (
-                <>{loading ? "Enviando..." : "Enviar mensagem"}<ArrowRight className="size-4 group-hover:translate-x-0.5 transition" /></>
+                <>{loading ? "Enviando..." : "Quero conversar com a Gi.Ga"}<ArrowRight className="size-4 group-hover:translate-x-0.5 transition" /></>
               )}
             </button>
           </div>
