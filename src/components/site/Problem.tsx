@@ -38,12 +38,12 @@ export function Problem() {
     <section id="desafios" className="py-24 sm:py-32 bg-secondary/40 border-y border-border">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl reveal">
-          <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">Cenário atual</span>
+          <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">Desafios do mercado</span>
           <h2 className="mt-3 text-3xl sm:text-5xl font-bold">
-            Quando o crescimento depende mais de <span className="text-accent-grad">esforço</span> do que de método
+            O que impede sua <span className="text-accent-grad">operação comercial</span> de vender mais?
           </h2>
           <p className="mt-5 text-muted-foreground">
-            Alguns sinais revelam quando a operação comercial ainda não sustenta os objetivos do negócio.
+            Alguns sinais revelam onde a operação perde força, previsibilidade e oportunidades de receita.
           </p>
         </div>
 
@@ -66,7 +66,8 @@ export function Problem() {
 
         <div className="reveal mt-12 rounded-2xl bg-ink text-white p-8 lg:p-10 ring-soft">
           <p className="text-xl sm:text-2xl font-semibold leading-snug">
-            Quando esses sinais se repetem, o problema raramente é esforço. É método.
+            Esses desafios raramente aparecem de forma isolada. Eles mostram que o crescimento passou a exigir mais
+            direção, coordenação e capacidade de ação comercial.
           </p>
         </div>
       </div>

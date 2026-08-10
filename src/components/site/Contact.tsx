@@ -46,10 +46,12 @@ export function Contact() {
         <div className="lg:col-span-2 reveal">
           <span className="text-xs uppercase tracking-[0.2em] text-teal-soft font-semibold">Vamos conversar</span>
           <h2 className="mt-3 text-3xl sm:text-5xl font-bold leading-tight">
-            Vamos construir juntos o futuro do seu <span className="text-accent-grad">negócio</span>?
+            Sua empresa está pronta para vender mais — com estratégia, estrutura e{" "}
+            <span className="text-accent-grad">execução</span>?
           </h2>
           <p className="mt-3 text-white leading-relaxed">
-            Entre em contato e vamos impulsionar as vendas da sua operação.
+            Conte-nos o desafio da sua operação comercial. Vamos avaliar como fortalecer sua estrutura de vendas, gerar
+            novas oportunidades e ampliar receita.
           </p>
           <div className="mt-8 space-y-3 text-sm">
             <a href="mailto:contato@gigacomercial.com" className="flex items-center gap-3 text-white/90 hover:text-teal-soft transition">
@@ -96,7 +98,7 @@ export function Contact() {
               {sent ? (
                 <><CheckCircle2 className="size-4" /> Enviado</>
               ) : (
-                <>{loading ? "Enviando..." : "Enviar mensagem"}<ArrowRight className="size-4 group-hover:translate-x-0.5 transition" /></>
+                <>{loading ? "Enviando..." : "Quero conversar com a Gi.Ga"}<ArrowRight className="size-4 group-hover:translate-x-0.5 transition" /></>
               )}
             </button>
           </div>

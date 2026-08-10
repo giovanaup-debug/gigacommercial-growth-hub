@@ -11,7 +11,7 @@ export function Hero() {
         <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted-foreground reveal">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Inteligência Comercial · B2B
+            Inteligência Comercial B2B · Serviços e Tecnologia
           </div>
 
           <h1 className="reveal mt-6 text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-foreground">
@@ -20,8 +20,12 @@ export function Hero() {
           </h1>
 
           <p className="reveal mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            A Gi.Ga | Inteligência Comercial transforma sua força de vendas através de estratégia inteligente, previsibilidade
-            e relacionamento de alto valor. Mais de 15 anos de experiência em vendas consultivas.
+            A Gi.Ga estrutura e fortalece operações comerciais B2B, da estratégia à execução, para aumentar as vendas
+            com método e previsibilidade.
+          </p>
+
+          <p className="reveal mt-4 max-w-2xl text-muted-foreground leading-relaxed">
+            Mais de 15 anos de experiência executiva em vendas consultivas B2B, serviços e tecnologia.
           </p>
 
           <div className="reveal mt-10 flex flex-wrap gap-3">

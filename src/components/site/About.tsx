@@ -29,24 +29,16 @@ export function About() {
   return (
     <section id="quem-somos" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="reveal relative">
-            <img
-              src={team}
-              alt="Giovana Urrutia e Gabriela Amando, sócias da Gi.Ga"
-              className="w-full rounded-3xl ring-soft border border-teal-soft/60"
-            />
-            <div className="absolute -bottom-6 -right-6 hidden sm:block bg-primary text-primary-foreground rounded-2xl p-5 ring-soft">
-              <div className="text-3xl font-bold">+15</div>
-              <div className="text-xs uppercase tracking-wider opacity-80 mt-1">&nbsp; &nbsp; &nbsp;ANOS</div>
-            </div>
-          </div>
+        <div className="max-w-3xl reveal">
+          <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">Quem somos</span>
+          <h2 className="mt-3 text-3xl sm:text-5xl font-bold">
+            <span className="text-accent-grad">+15 anos</span> de experiência em vendas consultivas.
+          </h2>
+        </div>
+
+        <div className="mt-14 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="reveal">
-            <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">Quem somos</span>
-            <h2 className="mt-3 text-3xl sm:text-5xl font-bold">
-              <span className="text-accent-grad">+15 anos</span> de experiência em vendas consultivas.
-            </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               Unimos trajetórias complementares em vendas consultivas B2B, tecnologia, serviços, gestão de operações, contas estratégicas e negociações complexas.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -58,7 +50,19 @@ export function About() {
               <div className="font-display font-bold text-lg">GABRIELA AMANDO</div>
             </div>
           </div>
+          <div className="reveal relative">
+            <img
+              src={team}
+              alt="Giovana Urrutia e Gabriela Amando, sócias da Gi.Ga"
+              className="w-full rounded-3xl ring-soft border border-teal-soft/60"
+            />
+            <div className="absolute -bottom-6 -right-6 hidden sm:block bg-primary text-primary-foreground rounded-2xl p-5 ring-soft">
+              <div className="text-3xl font-bold">+15</div>
+              <div className="text-xs uppercase tracking-wider opacity-80 mt-1">&nbsp; &nbsp; &nbsp;ANOS</div>
+            </div>
+          </div>
         </div>
+
 
         <div className="mt-20 grid md:grid-cols-2 gap-6">
           {partners.map((p) => (

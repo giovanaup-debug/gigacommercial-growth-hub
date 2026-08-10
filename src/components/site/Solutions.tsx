@@ -30,7 +30,7 @@ const groups = [
     items: [
       {
         title: "Gestão Comercial Fracionada e Evolução Contínua",
-        desc: "A Gi.Ga assume a gestão da equipe comercial, acompanhando pipeline, desempenho, indicadores, metas e rotinas para fortalecer a execução e a evolução da operação.",
+        desc: "A Gi.Ga assume a gestão da equipe comercial em um modelo flexível e não exclusivo, acompanhando pipeline, desempenho, indicadores, metas e rotinas para fortalecer a execução e a evolução da operação.",
         bullets: ["Gestão da equipe comercial", "Pipeline, indicadores e metas", "Desenvolvimento da execução"],
       },
       {
